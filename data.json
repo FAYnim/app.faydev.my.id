@@ -1,0 +1,82 @@
+[
+  {
+    "id": "tradingtool",
+    "name": "TradingTool",
+    "description": "Technical analysis tool for crypto market with real-time data from Indodax",
+    "logo": "/assets/tradingtool.png",
+    "url": "https://tradingtool.faydev.my.id",
+    "techStack": ["Node.js", "Express", "Indodax API"],
+    "category": "Trading",
+    "status": "Live"
+  },
+  {
+    "id": "portfolio",
+    "name": "Portfolio",
+    "description": "Personal portfolio website showcasing projects and skills",
+    "logo": "/assets/portfolio.png",
+    "url": "https://faydev.my.id",
+    "techStack": ["HTML", "CSS", "JavaScript"],
+    "category": "Personal",
+    "status": "Live"
+  },
+  {
+    "id": "notesapp",
+    "name": "QuickNotes",
+    "description": "Lightweight note-taking app with markdown support and local storage",
+    "logo": "/assets/quicknotes.png",
+    "url": "https://notes.faydev.my.id",
+    "techStack": ["React", "LocalStorage", "Markdown"],
+    "category": "Productivity",
+    "status": "Beta"
+  },
+  {
+    "id": "linkshortener",
+    "name": "FayLink",
+    "description": "URL shortener with click analytics and custom alias support",
+    "logo": "/assets/faylink.png",
+    "url": "https://link.faydev.my.id",
+    "techStack": ["PHP", "MySQL", "REST API"],
+    "category": "Utility",
+    "status": "Live"
+  },
+  {
+    "id": "weatherdash",
+    "name": "WeatherDash",
+    "description": "Minimalist weather dashboard with location-based forecasting",
+    "logo": "/assets/weatherdash.png",
+    "url": "https://weather.faydev.my.id",
+    "techStack": ["JavaScript", "OpenWeather API", "CSS Grid"],
+    "category": "Utility",
+    "status": "Maintenance"
+  },
+  {
+    "id": "devtools",
+    "name": "DevToolkit",
+    "description": "Collection of developer utilities: JSON formatter, base64, regex tester",
+    "logo": "/assets/devtoolkit.png",
+    "url": "https://devtools.faydev.my.id",
+    "techStack": ["Vanilla JS", "Web Workers", "CSS"],
+    "category": "Developer",
+    "status": "Live"
+  },
+  {
+    "id": "invoicegen",
+    "name": "InvoiceGen",
+    "description": "Simple invoice generator with PDF export for freelancers",
+    "logo": "/assets/invoicegen.png",
+    "url": "https://invoice.faydev.my.id",
+    "techStack": ["PHP", "jsPDF", "HTML2Canvas"],
+    "category": "Business",
+    "status": "Private"
+  },
+  {
+    "id": "quizengine",
+    "name": "QuizEngine",
+    "description": "Interactive quiz platform with timer and scoring system",
+    "logo": "/assets/quizengine.png",
+    "url": "https://quiz.faydev.my.id",
+    "techStack": ["JavaScript", "Node.js", "MongoDB"],
+    "category": "Education",
+    "status": "Beta"
+  }
+]

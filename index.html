@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faydev — App Directory</title>
+  <meta name="description" content="Central hub for all web applications built by Faydev. Browse, search, and access tools built by Faris Adillah Yufiansyah.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════ NAVBAR ═══════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#" class="navbar__brand">
+        <span class="navbar__brand-mark">F</span>
+        <span class="navbar__brand-text">aydev</span>
+      </a>
+      <ul class="navbar__menu">
+        <li><a href="#" class="navbar__link">Home</a></li>
+        <li><a href="https://github.com/farisadillah" target="_blank" rel="noopener noreferrer" class="navbar__link navbar__link--external">GitHub <i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i></a></li>
+        <li><a href="mailto:contact@faydev.my.id" class="navbar__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════ HERO ═══════════════════════════════════════════ -->
+  <header class="hero" id="hero">
+    <div class="container hero__inner">
+      <div class="hero__photo-col">
+        <div class="hero__photo-frame">
+          <div class="hero__photo-placeholder">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <!-- Replace with: <img src="/assets/faris.jpg" alt="Faris Adillah Yufiansyah" class="hero__photo-img"> -->
+        </div>
+      </div>
+      <div class="hero__info-col">
+        <h1 class="hero__name">Faris Adillah<br>Yufiansyah</h1>
+        <p class="hero__brand">Faydev</p>
+        <div class="hero__bio">
+          <p class="hero__bio-line"><span class="hero__bio-bullet"></span> Web Developer</p>
+          <p class="hero__bio-line"><span class="hero__bio-bullet"></span> Builder of practical web applications</p>
+          <p class="hero__bio-line"><span class="hero__bio-bullet"></span> Content Creator</p>
+        </div>
+        <div class="hero__socials">
+          <a href="https://github.com/farisadillah" target="_blank" rel="noopener noreferrer" class="hero__social-link" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://instagram.com/faydev" target="_blank" rel="noopener noreferrer" class="hero__social-link" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://youtube.com/@faydev" target="_blank" rel="noopener noreferrer" class="hero__social-link" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="https://linkedin.com/in/farisadillah" target="_blank" rel="noopener noreferrer" class="hero__social-link" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════ APP DIRECTORY ═══════════════════════════════════════ -->
+  <main class="directory" id="directory">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div class="directory__header">
+        <div class="directory__header-text">
+          <h2 class="directory__title">Applications</h2>
+          <p class="directory__subtitle">Web applications built by Faydev</p>
+        </div>
+        <div class="directory__count" id="appCount">
+          <span class="directory__count-number" id="appCountNumber">0</span>
+          <span class="directory__count-label">Applications Built</span>
+        </div>
+      </div>
+
+      <!-- Search & Filter Bar -->
+      <div class="directory__controls">
+        <div class="directory__search">
+          <i class="fa-solid fa-magnifying-glass directory__search-icon"></i>
+          <input
+            type="text"
+            id="searchInput"
+            class="directory__search-input"
+            placeholder="Search apps, tech, description..."
+            autocomplete="off"
+          >
+        </div>
+        <div class="directory__filters">
+          <div class="directory__filter-group">
+            <select id="filterCategory" class="directory__select">
+              <option value="">All Categories</option>
+            </select>
+          </div>
+          <div class="directory__filter-group">
+            <select id="filterTech" class="directory__select">
+              <option value="">All Tech</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results info -->
+      <div class="directory__results-info" id="resultsInfo"></div>
+
+      <!-- App Grid -->
+      <div class="directory__grid" id="appGrid">
+        <!-- Cards rendered by JS -->
+      </div>
+
+      <!-- Empty State -->
+      <div class="directory__empty" id="emptyState" style="display:none;">
+        <i class="fa-solid fa-folder-open"></i>
+        <p>No applications match your search.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ═══════════════════════════════════════════ FOOTER ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; 2026 Faydev</p>
+      <a href="https://github.com/farisadillah" target="_blank" rel="noopener noreferrer" class="footer__link">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
