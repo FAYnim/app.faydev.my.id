@@ -36,7 +36,6 @@
     bindEvents();
   }
 
-	// Filter
   function populateFilters() {
     categories.forEach(cat => {
       const opt = document.createElement('option');
@@ -95,7 +94,6 @@
     }).join('');
   }
 
-  // ─── Filter & Search Logic ────────────────────────────────────────────────
   function applyFilters() {
     const query = searchInput.value.trim().toLowerCase();
     const selectedCategory = filterCategory.value;
@@ -134,14 +132,12 @@
     renderCards(filtered);
   }
 
-  // ─── Event Bindings ───────────────────────────────────────────────────────
   function bindEvents() {
     searchInput.addEventListener('input', debounce(applyFilters, 200));
     filterCategory.addEventListener('change', applyFilters);
     filterTech.addEventListener('change', applyFilters);
   }
 
-  // ─── Utilities ────────────────────────────────────────────────────────────
   function escapeHtml(str) {
     const div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
@@ -156,6 +152,5 @@
     };
   }
 
-  // ─── Boot ─────────────────────────────────────────────────────────────────
   document.addEventListener('DOMContentLoaded', init);
 })();
