@@ -66,27 +66,27 @@
       const statusClass = app.status.toLowerCase();
       const initial = app.name.charAt(0);
       const techChips = app.techStack
-        .map(t => `<span class="card__chip">${escapeHtml(t)}</span>`)
+        .map(t => `<span class="card-chip">${escapeHtml(t)}</span>`)
         .join('');
 
       return `
         <article class="card">
-          <div class="card__top">
-            <div class="card__logo">
+          <div class="card-top">
+            <div class="card-logo">
               <img
                 src="${escapeHtml(app.logo)}"
                 alt="${escapeHtml(app.name)} logo"
                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
               >
-              <span class="card__logo-fallback" style="display:none;">${escapeHtml(initial)}</span>
+              <span class="card-logo-fallback" style="display:none;">${escapeHtml(initial)}</span>
             </div>
-            <span class="card__status card__status--${statusClass}">${escapeHtml(app.status)}</span>
+            <span class="card-status card-status--${statusClass}">${escapeHtml(app.status)}</span>
           </div>
-          <h3 class="card__name">${escapeHtml(app.name)}</h3>
-          <p class="card__desc">${escapeHtml(app.description)}</p>
-          <div class="card__tech">${techChips}</div>
-          <div class="card__action">
-            <a href="${escapeHtml(app.url)}" target="_blank" rel="noopener noreferrer" class="card__btn">
+          <h3 class="card-name">${escapeHtml(app.name)}</h3>
+          <p class="card-desc">${escapeHtml(app.description)}</p>
+          <div class="card-tech">${techChips}</div>
+          <div class="card-action">
+            <a href="${escapeHtml(app.url)}" target="_blank" rel="noopener noreferrer" class="card-btn">
               Open App <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </div>
